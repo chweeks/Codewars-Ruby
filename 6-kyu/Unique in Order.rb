@@ -1,8 +1,5 @@
-def unique_in_order(iterable)
-  iterable.is_a?(Array) ? items = iterable : items = iterable.split('')
-  items.each_with_index do |item, index|
-    while item == items[index+1]
-      items.delete_at(index)
-    end
-  end
+def autocorrect(input)
+  input.gsub(/\byou\b|u/, 'you' => 'your sister', 'u' => 'your sister')
 end
+
+puts autocorrect('u want to go to the movies?')
