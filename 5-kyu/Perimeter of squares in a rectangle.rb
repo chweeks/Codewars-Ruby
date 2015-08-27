@@ -10,7 +10,7 @@
 #S = S(0) + S(1) + ... + S(n) ?
 
 def perimeter(n)
-lengths = [1,1]
+  lengths = [1,1]
   while lengths.size < n+1
     lengths.push(lengths[-1] + lengths[-2])
   end
